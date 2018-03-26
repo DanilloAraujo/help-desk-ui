@@ -17,6 +17,7 @@ import { routes } from './app.routes';
 
 import { UserService } from './services/user.service';
 import { SharedService } from './services/shared.service';
+import { UserNewComponent } from './components/user-new/user-new.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SharedService } from './services/shared.service';
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserNewComponent
   ],
   imports: [
     BrowserModule,
