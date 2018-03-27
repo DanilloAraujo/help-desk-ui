@@ -42,7 +42,7 @@ import { SharedService } from './services/shared.service';
   providers: [
     UserService, 
     SharedService,
-    DialogService
+    DialogService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
