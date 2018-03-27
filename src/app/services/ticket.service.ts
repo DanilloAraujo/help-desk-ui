@@ -10,7 +10,7 @@ export class TicketService {
 
   constructor(private http: HttpClient) { }
 
-  createOrUpadate(ticket: Ticket) {
+  createOrUpdate(ticket: Ticket) {
     if (ticket.id != null) {
       return this.http.put(`${HELP_DESK_API}/api/ticket`, ticket);
     } else {

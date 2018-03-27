@@ -19,7 +19,9 @@ import { routes } from './app.routes';
 
 import { DialogService } from './dialog.service';
 import { UserService } from './services/user.service';
+import { TicketService } from './services/ticket.service';
 import { SharedService } from './services/shared.service';
+import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SharedService } from './services/shared.service';
     HomeComponent,
     LoginComponent,
     UserNewComponent,
-    UserListComponent
+    UserListComponent,
+    TicketNewComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { SharedService } from './services/shared.service';
     routes,
   ],
   providers: [
-    UserService, 
+    UserService,
+    TicketService, 
     SharedService,
     DialogService,
     AuthGuard,
