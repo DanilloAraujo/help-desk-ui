@@ -25,10 +25,21 @@
           </div>
         </div>
 
+        <div [ngClass]="getFormGroupClass(profile.invalid, profile.dirty)">
+          <label for="selectProfile" class="col-sm-2 control-label">Profile</label>
+          <div class="col-sm-10">
+            <select [(ngModel)]="user.profile" class="form-control select2" name="profile" id="selectProfile" #profile="ngModel" style="width: 100%" required>
+              <option>ROLE_ADMIN</option>
+              <option>ROLE_CUSTOMER</option>
+              <option>ROLE_TECHNICIAN</option>
+            </select>
+            <span class="help-block" *ngIf="profile.invalid && password.dirty">Profile is required</span>
+          </div>
+        </div>
+
       </div>
 
       <div class="box-footer">
-        <button type="submit" (click)="cancelLogin()" class="btn btn-default">Cancel</button>
         <button type="submit" [disabled]="!form.valid" class="btn btn-info pull-right">Login</button>
       </div>
 
