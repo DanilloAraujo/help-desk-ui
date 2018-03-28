@@ -22,6 +22,7 @@ import { UserService } from './services/user.service';
 import { TicketService } from './services/ticket.service';
 import { SharedService } from './services/shared.service';
 import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
+import { TicketListComponent } from './components/ticket-list/ticket-list.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TicketNewComponent } from './components/ticket-new/ticket-new.component
     LoginComponent,
     UserNewComponent,
     UserListComponent,
-    TicketNewComponent
+    TicketNewComponent,
+    TicketListComponent
   ],
   imports: [
     BrowserModule,
