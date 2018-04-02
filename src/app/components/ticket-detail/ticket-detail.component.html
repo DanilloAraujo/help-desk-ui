@@ -1,0 +1,48 @@
+<div class="col-md-10" style="margin-left: 0%">
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3>Detail Ticket</h3>
+    </div>
+    <form class="form-horizontal">
+      <div [ngClass]="classCss" role="alert" *ngIf="message">
+        <strong>{{ message.text }}</strong>
+      </div>
+      <div class="box-body">
+        <ul class="list-group list-group-unbordered">
+          <li class="list-group-item">
+            <b>Number: </b>
+            <span>{{ ticket.number }}</span>
+            <span class="pull-right">
+              <b>Title: </b>
+              <span>{{ ticket.title }}</span>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <b>Priority: </b>
+            <span>{{ ticket.priority }}</span>
+            <span class="pull-right">
+              <b>Created By: </b>
+              <span>{{ ticket?.user?.email }}</span>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <b>Status: </b>
+            <span>{{ ticket.status }}</span>
+            <span class="pull-right">
+              <b>Assigned To: </b>
+              <span>{{ ticket?.assignedUser?.email }}</span>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <b>Date: </b>
+            <span>{{ ticket.date | date:'dd/MM/yyyy' }}</span>
+            <span class="pull-right">
+              <b>Descrição: </b>
+              <span>{{ ticket.description }}</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</div>

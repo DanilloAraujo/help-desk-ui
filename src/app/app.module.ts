@@ -23,6 +23,7 @@ import { TicketService } from './services/ticket.service';
 import { SharedService } from './services/shared.service';
 import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
 import { TicketListComponent } from './components/ticket-list/ticket-list.component';
+import { TicketDetailComponent } from './components/ticket-detail/ticket-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
     UserNewComponent,
     UserListComponent,
     TicketNewComponent,
-    TicketListComponent
+    TicketListComponent,
+    TicketDetailComponent
   ],
   imports: [
     BrowserModule,
